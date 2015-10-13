@@ -1,0 +1,62 @@
+{
+	"name":"Michael S. Barnes",
+	"address":"55 Page St, APT 518, San Francisco, CA 94102",
+	"phone":"(856) 577-1467",
+	"github":"https://github.com/mikeysol",
+	"website":"http://www.michaelbarnes.info/",
+	"social media":["https://www.linkedin.com/in/mikesbarnes"],
+	"email":"michaelbarnesmail@gmail.com",
+	"summary":{
+	"title":"Software Developer/Computer Engineer",
+	"description":"Software development with experience in Java; Educated as a Computer Engineer developing both software and on MicroControllers; Database experience with Oracle SQL; Scripting language experience with JavaScript; Actively learning Mobile development with Android, Web development with AngularJS, Hybrid App development with Ionic, and Internet of Things (IoT) app development."
+	},
+	"skills":{
+	  "title":"Technical Skills",
+		"list":["Java","JavaScript","Oracle SQL","Java JPA","Android App Development","Spring MVC"]
+	},
+	"employment history":[{
+	"company name":"Html5maker.com",
+	"position":"Software Engineer",
+	"location":"San Francisco, CA",
+	"period":"December 2014 - June 2015",
+	"description":["Participated in a startup environment often working remotely or in a shared workspace",
+		"Supported development of templates and front-end tools clients used to create banners and advertisements",
+		"Created Java code to connect to the front-end components developed in AngularJS",
+		"Developed templates with HTML5 design and Bootstrap CSS",
+		"Source control with Git, and package management with NPM, Bower, Grunt"]
+	},{
+	"company name":"JPMorgan Chase & Co. Global Fund Services",
+	"position":"Application Developer",
+	"location":"New York, NY",
+	"period":"June 2012 - September 2014",
+	"description":["Developed business process code in Java that automated the workflow of internal teams",
+		"Implemented Java Spring MVC framework",
+		"Developed unit tests in JUnit",
+		"Controller logic developed in Java JPA",
+		"Oracle SQL for back-end database development, stored procedures, and reporting",
+		"Business Intelligence (BI) dashboards developed with JavaScript API for Tableau",
+		"Package management with Maven",
+		"Executed the Agile Software Development Lifecycle (SDLC) with 2 week Sprints managed with JIRA"]
+	},{
+	"company name":"JPMorgan Chase & Co. Compute Back Bone (CBB)",
+	"position":"Intern",
+	"location":"Jersey City, NJ",
+	"period":"Summer 2011",
+	"description":["Developed Python scripts for discovering activity such as a client exceeding resource allocation on our cloud infrastructure"]
+	}],
+	"education":[{
+	"school":{
+		"main school/university name":"Syracuse University",
+		"sub school/college name":"L. C. Smith College of Engineering and Computer Science",
+		"location":"Syracuse, NY",
+		"degree":[{
+			"name":"Bachelor of Science Degree in Computer Engineering",
+			"date earned":"May 2012"
+		}],
+		"school projects":["Designed and developed an Electronic Refreshable Braille Display for the Visually Impaired",
+			"Created a Computer Graphics Project using OpenGL(C++)",
+			"Real Time Digital Audio Effects Playback with MicroController and FPGA (Motorola Assembly language)"]
+	}
+	}],
+	"personal projects":["Currently developing an Android application with Bluetooth Low Energy (BLE) beacons"]
+}

@@ -1,0 +1,55 @@
+<div class="resume">
+    <p class="center"><b>{{resume.name}}</b></p>
+
+    <p class="center">{{resume.address}}</p>
+
+    <p class="center"><b>{{resume.phone}}</b></p>
+
+    <p class="center"><a href="{{resume.github}}"><b>{{resume.github}}</b></a></p>
+
+    <p class="center"><a href="{{resume.website}}">{{resume.website}}/</a></p>
+
+    <p class="center"><a href="mailto:{{resume.email}}"><b>{{resume.email}}</b></a></p>
+
+    <p class="center"><b>{{resume.summary.title}}</b></p>
+
+    <p>{{resume.summary.description}}</p>
+
+    <p><b>Technical Skills</b></p>
+
+    <ul>
+        <li ng-repeat="skill in resume.skills.list">{{skill}}</li>
+    </ul>
+    </b><p><b>Employment</b></p>
+    <ul>
+        <li ng-repeat="job in resume['employment history']">
+            <p><b>{{job["company name"]}}</b>, {{job.location}} {{job.period}}</p>
+            <p>{{job.position}}</p>
+            <ul>
+                <li ng-repeat="text in job.description">
+                    <p>{{text}}</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p><b>Education</b></p>
+    <ul>
+        <li ng-repeat="knowledge in resume.education">
+            <p><b>{{knowledge.school["main school/university name"]}}</b>, {{knowledge.school["sub school/college name"]}}, {{knowledge.school.location}}</p>
+
+            <p><i>{{knowledge.school.degree[0].name}}</i>, {{knowledge.school.degree[0]["date earned"]}}</p>
+            <p><b>Notable College Projects</b></p>
+            <ul>
+                <li ng-repeat="project in knowledge.school['school projects']">
+                    <p>{{project}}</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p><b>Personal Projects</b></p>
+    <ul>
+        <li ng-repeat="project in resume['personal projects']">
+            <p>{{project}}</p>
+        </li>
+    </ul>
+</div>
