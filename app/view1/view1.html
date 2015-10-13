@@ -1,22 +1,13 @@
 <div class="resume">
     <p class="center"><b>{{resume.name}}</b></p>
-
     <p class="center">{{resume.address}}</p>
-
     <p class="center"><b>{{resume.phone}}</b></p>
-
     <p class="center"><a href="{{resume.github}}"><b>{{resume.github}}</b></a></p>
-
     <p class="center"><a href="{{resume.website}}">{{resume.website}}</a></p>
-
     <p class="center"><a href="mailto:{{resume.email}}"><b>{{resume.email}}</b></a></p>
-
     <p class="center"><b>{{resume.summary.title}}</b></p>
-
     <p>{{resume.summary.description}}</p>
-
     <p><b>Technical Skills</b></p>
-
     <ul>
         <li ng-repeat="skill in resume.skills.list">{{skill}}</li>
     </ul>
