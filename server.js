@@ -7,10 +7,12 @@ var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 var app            = express();
 
-app.use(express.static(__dirname + '/app')); 	// set the static files location /public/img will be /img for users
+app.set('port', (process.env.PORT || 4567));
+app.use(express.static(__dirname + '/app')); 	// set the static files location
 app.use(morgan('dev')); 					// log every request to the console
 app.use(bodyParser()); 						// pull information from html in POST
 app.use(methodOverride()); 					// simulate DELETE and PUT
 
-app.listen(4567);
-console.log('Simple static server listening on port 4567');
+app.listen(app.get('port'), function(){
+    console.log('Simple static server listening on port ', app.get('port'));
+});
