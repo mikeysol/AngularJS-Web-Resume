@@ -11,7 +11,6 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', ['$scope','$http',function($scope,$http) {
       $http.get('resume/michael-barnes-resume.json').success(function(data){
-        $scope.resume = data;
+        $scope.resumes = data;
       });
-
 }]);

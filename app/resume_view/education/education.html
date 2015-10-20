@@ -1,0 +1,16 @@
+<div>
+    <p><b>Education</b></p>
+    <ul>
+        <li ng-repeat="knowledge in resume.education">
+            <p><b>{{knowledge.school["main school/university name"]}}</b>, {{knowledge.school["sub school/college name"]}}, {{knowledge.school.location}}</p>
+
+            <p><i>{{knowledge.school.degree[0].name}}</i>, {{knowledge.school.degree[0]["date earned"]}}</p>
+            <p><b>Notable College Projects</b></p>
+            <ul>
+                <li ng-repeat="project in knowledge.school['school projects']">
+                    <p>{{project}}</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

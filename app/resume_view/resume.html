@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <!--Sidebar content-->
+
+            Search: <input ng-model="query">
+            <!--Sort by:
+            <select ng-model="orderProp">
+                <option value="name">Alphabetical</option>
+                <option value="age">Newest</option>
+            </select>-->
+
+        </div>
+        <div class="col-md-10">
+            <ul>
+                <li ng-repeat="resume in resumes">
+                    <p class="center"><b>{{resume.name}}</b></p>
+                    <p class="center">{{resume.address}}</p>
+                    <p class="center"><b>{{resume.phone}}</b></p>
+                    <p class="center"><a href="{{resume.github}}"><b>{{resume.github}}</b></a></p>
+                    <p class="center"><a href="{{resume.website}}">{{resume.website}}</a></p>
+                    <p class="center"><a href="mailto:{{resume.email}}"><b>{{resume.email}}</b></a></p>
+                    <div ui-view="summary"></div>
+                    <div ui-view="skills"></div>
+                    <div ui-view="employment"></div>
+                    <div ui-view="education"></div>
+                    <div ui-view="projects"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

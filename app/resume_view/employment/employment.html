@@ -1,0 +1,14 @@
+<div>
+    </b><p><b>Employment</b></p>
+    <ul>
+        <li ng-repeat="job in resume['employment history']">
+            <p><b>{{job["company name"]}}</b>, {{job.location}} {{job.period}}</p>
+            <p>{{job.position}}</p>
+            <ul>
+                <li ng-repeat="text in job.description | filter:query">
+                    <p>{{text}}</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

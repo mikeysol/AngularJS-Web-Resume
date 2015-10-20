@@ -1,4 +1,4 @@
-{
+[{
 	"name":"Michael S. Barnes",
 	"address":"San Francisco, CA",
 	"phone":"(856) 577-1467",
@@ -59,4 +59,4 @@
 	}
 	}],
 	"personal projects":["Currently developing an Android application with Bluetooth Low Energy (BLE) beacons"]
-}
+}]
