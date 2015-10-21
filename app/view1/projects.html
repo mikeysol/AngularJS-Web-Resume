@@ -1,0 +1,8 @@
+<div ng-show="resume.filteredProjects.length">
+    <p><b>Personal Projects</b></p>
+    <ul>
+        <li ng-repeat="project in resume.filteredProjects = (resume['personal projects'] | filter:query)">
+            <p>{{project}}</p>
+        </li>
+    </ul>
+</div>

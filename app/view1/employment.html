@@ -1,0 +1,16 @@
+<div ng-show="resume.filteredJobs.length">
+    <p><b>Employment</b></p>
+    <ul>
+        <li ng-repeat="job in resume.filteredJobs=(resume['employment history'] | filter:query)"  ng-show="job.filteredDescript.length + resume.filteredJobs.length">
+            <div>
+                <p><b>{{job["company name"]}}</b>, {{job.location}} {{job.period}}</p>
+                <p>{{job.position}}</p>
+                <ul>
+                    <li ng-repeat="text in job.filteredDescript = (job.description | filter:query)">
+                        <p>{{text}}</p>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>

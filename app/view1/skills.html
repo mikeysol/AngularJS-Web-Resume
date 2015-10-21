@@ -1,0 +1,6 @@
+<div ng-show="resume.skills.filteredList.length">
+    <p><b>Technical Skills</b></p>
+    <ul>
+        <li class="info-listing" ng-repeat="skill in resume.skills.filteredList = (resume.skills.list | filter:query)">{{skill}}</li>
+    </ul>
+</div>
