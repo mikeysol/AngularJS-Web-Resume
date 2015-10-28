@@ -1,7 +1,7 @@
-<div ng-show="resume.filteredProjects.length">
+<div ng-show="sect.filteredProjects.length">
     <p><b>Personal Projects</b></p>
     <ul>
-        <li ng-repeat="project in resume.filteredProjects = (resume['personal projects'] | filter:query)">
+        <li ng-repeat="project in sect.filteredProjects = (sect['personal projects'] | filter:query)">
             <p>{{project}}</p>
         </li>
     </ul>

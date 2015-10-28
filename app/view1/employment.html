@@ -1,7 +1,7 @@
-<div ng-show="resume.filteredJobs.length">
+<div ng-show="sect.filteredJobs.length">
     <p><b>Employment</b></p>
     <ul>
-        <li ng-repeat="job in resume.filteredJobs=(resume['employment history'] | filter:query)"  ng-show="job.filteredDescript.length + resume.filteredJobs.length">
+        <li ng-repeat="job in sect.filteredJobs=(sect['employment history'] | filter:query)"  ng-show="job.filteredDescript.length + sect.filteredJobs.length">
             <div>
                 <p><b>{{job["company name"]}}</b>, {{job.location}} {{job.period}}</p>
                 <p>{{job.position}}</p>

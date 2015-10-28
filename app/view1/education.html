@@ -1,7 +1,7 @@
-<div ng-show="resume.filteredEd.length">
+<div ng-show="sect.filteredEd.length">
     <p><b>Education</b></p>
     <ul>
-        <li ng-repeat="knowledge in resume.filteredEd = (resume.education | filter:query)">
+        <li ng-repeat="knowledge in sect.filteredEd = (sect.education | filter:query)">
             <p><b>{{knowledge.school["main school/university name"]}}</b>, {{knowledge.school["sub school/college name"]}}, {{knowledge.school.location}}</p>
 
             <p><i>{{knowledge.school.degree[0].name}}</i>, {{knowledge.school.degree[0]["date earned"]}}</p>

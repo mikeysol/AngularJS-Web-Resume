@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div id="view1" class="container-fluid" ng-cloak>
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 sidebar-offcanvas" role="navigation">
             <!--Sidebar content-->
 
             Search: <input ng-model="query">
@@ -10,12 +10,11 @@
             <ul class="list-unstyled">
                 <!--Resume content-->
                 <li ng-repeat="resume in resumes">
-                    <div ng-include="'view1/intro.html'"></div>
-                    <div ng-include="'view1/summary.html'"></div>
-                    <div ng-include="'view1/skills.html'"></div>
-                    <div ng-include="'view1/employment.html'"></div>
-                    <div ng-include="'view1/education.html'"></div>
-                    <div ng-include="'view1/projects.html'"></div>
+                    <ul class="list-unstyled" data-as-sortable data-ng-model="resume.sections">
+                        <li ng-repeat="sect in resume.sections" data-as-sortable-item>
+                            <div id="{{sect.sectId}}" data-as-sortable-item-handle ng-include=sect.template></div>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>

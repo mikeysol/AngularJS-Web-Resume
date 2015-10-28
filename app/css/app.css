@@ -1,5 +1,46 @@
 /* app css stylesheet */
 
-p.center {
+[draggable] {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: element;
+}
+div, .container-fluid{
+  display:table;
+  width: 100%;
+  margin-top: -50px;
+  padding-top: 50px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.row {
+  height: auto;
+  display:table-row;
+}
+
+.col-md-2 {
+  display: table-cell;
+  background-color: rgba(37, 100, 157, 0.5);
+  width: 10%;
+}
+
+.col-md-10{
+  display: table-cell;
+}
+.center {
   text-align: center;
+}
+
+.over {
+  border: 2px dashed #000;
+}
+
+.moving {
+  opacity: 0.25;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
 }
