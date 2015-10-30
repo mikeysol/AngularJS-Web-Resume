@@ -1,15 +1,27 @@
 'use strict';
 
-var resume = angular.module('myApp.view1', ['ngRoute']);
+var resume = angular.module('myApp.resume', ['ngRoute']);
 
 resume.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
-  });
+  $routeProvider.when('/resume/all', {
+    templateUrl: 'view1/resume.html',
+    controller: 'ResumeCtrl'
+  })
+      .when('/resume/it', {
+          templateUrl: 'view1/resume.html',
+          controller: 'ResumeCtrl'
+      })
+      .when('/resume/engineering', {
+          templateUrl: 'view1/resume.html',
+          controller: 'ResumeCtrl'
+      })
+      .when('/resume/web', {
+          templateUrl: 'view1/resume.html',
+          controller: 'ResumeCtrl'
+      });
 }])
 
-.controller('View1Ctrl', ['$scope','$http',function($scope,$http) {
+.controller('ResumeCtrl', ['$scope','$http',function($scope,$http) {
       $http.get('resume/michael-barnes-resume.json').success(function(data){
         $scope.resumes = data;
       });

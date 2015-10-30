@@ -1,4 +1,4 @@
-<div id="view1" class="container-fluid" ng-cloak>
+<div id="resume-view" class="container-fluid" ng-cloak>
     <div class="row">
         <div class="col-md-2 sidebar-offcanvas" role="navigation">
             <!--Sidebar content-->
@@ -7,6 +7,10 @@
 
         </div>
         <div class="col-md-10">
+            <div ng-controller="NavCtrl">
+                <div ng-include="'view1/top-nav.html'"></div>
+            </div>
+            <br />
             <ul class="list-unstyled">
                 <!--Resume content-->
                 <li ng-repeat="resume in resumes">

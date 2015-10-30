@@ -1,0 +1,3 @@
+<ul class="nav nav-tabs nav-justified">
+    <li ng-repeat="nav in navList" role="presentation" ng-class="{ active: isActive(nav.route)}"><a href="#{{nav.route}}">{{nav.name}}</a></li>
+</ul>
