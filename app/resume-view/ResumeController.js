@@ -4,19 +4,19 @@ var resume = angular.module('myApp.resume', ['ngRoute','ngAnimate']);
 
 resume.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/resume/all', {
-    templateUrl: 'view1/resume.html',
+    templateUrl: 'resume-view/resume.html',
     controller: 'ResumeCtrl'
   })
       .when('/resume/it', {
-          templateUrl: 'view1/resume.html',
+          templateUrl: 'resume-view/resume.html',
           controller: 'ResumeCtrl'
       })
       .when('/resume/engineering', {
-          templateUrl: 'view1/resume.html',
+          templateUrl: 'resume-view/resume.html',
           controller: 'ResumeCtrl'
       })
       .when('/resume/web', {
-          templateUrl: 'view1/resume.html',
+          templateUrl: 'resume-view/resume.html',
           controller: 'ResumeCtrl'
       });
 }])
