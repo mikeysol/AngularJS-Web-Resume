@@ -1,0 +1,6 @@
+<div ng-show="sect.filteredList.length">
+    <p><b>Technical Skills</b></p>
+    <ul>
+        <li ng-repeat="skill in sect.filteredList = (sect.list | filter:query | perspective)" >{{skill.val}}</li>
+    </ul>
+</div>

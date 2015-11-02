@@ -1,6 +1,6 @@
 'use strict';
 
-var resume = angular.module('myApp.resume', ['ngRoute']);
+var resume = angular.module('myApp.resume', ['ngRoute','ngAnimate']);
 
 resume.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/resume/all', {
@@ -21,10 +21,8 @@ resume.config(['$routeProvider', function($routeProvider) {
       });
 }])
 
-.controller('ResumeCtrl', ['$scope','$http',function($scope,$http) {
-      $http.get('resume/michael-barnes-resume.json').success(function(data){
-        $scope.resumes = data;
-      });
+.controller('ResumeCtrl', ['$scope','Resume','$location',function($scope,Resume) {
+        $scope.resumes = Resume.query();
         $scope.dragControlListeners = {
             //accept: function (sourceItemHandleScope, destSortableScope) {return true;},//override to determine drag is allowed or not. default is true.
             itemMoved: function (event) {

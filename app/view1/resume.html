@@ -1,16 +1,14 @@
-<div id="resume-view" class="container-fluid" ng-cloak>
+<div id="resume-view" class="container-fluid">
     <div class="row">
-        <div class="col-md-2 sidebar-offcanvas" role="navigation">
+        <div class="col-md-2 sidebar-offcanvas" role="navigation" >
             <!--Sidebar content-->
 
             Search: <input ng-model="query">
-
+            <div ng-include="'view1/side-nav/side-nav.html'"></div>
         </div>
         <div class="col-md-10">
-            <div ng-controller="NavCtrl">
-                <div ng-include="'view1/top-nav.html'"></div>
-            </div>
-            <br />
+            <div ng-controller="NavCtrl" ng-include="'view1/top-nav/top-nav.html'"></div>
+            <br/>
             <ul class="list-unstyled">
                 <!--Resume content-->
                 <li ng-repeat="resume in resumes">
