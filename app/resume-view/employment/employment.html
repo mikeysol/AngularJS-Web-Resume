@@ -1,8 +1,11 @@
-<div ng-show="sect.filteredJobs.length">
+<div ng-show="sect.filteredJobs.length" class="sections">
     <p><b>Employment</b></p>
     <ul ng-controller="EmpCtrl">
         <li ng-repeat="job in sect.filteredJobs=(sect['employment history'] | filter:query | perspective)"  ng-show="job.filteredDescript.length + sect.filteredJobs.length">
             <div>
+                <div class="logo">
+                    <img ng-src="{{job.img}}" height="84" width="210">
+                </div>
                 <p><b>{{job["company name"]}}</b>, {{job.location}} {{job.period}}</p>
                 <p>{{job.position}}</p>
                 <ul>

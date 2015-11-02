@@ -11,7 +11,10 @@
 		"github": "https://github.com/mikeysol",
 		"website": "http://www.michaelbarnes.info/",
 		"social media": [
-		  "https://www.linkedin.com/in/mikesbarnes"
+		  {
+			"url": "https://www.linkedin.com/in/mikesbarnes",
+			"icon": "images/linkedin-icon.png"
+		  }
 		],
 		"email": "michaelbarnesmail@gmail.com"
 	  },
@@ -37,6 +40,7 @@
 		"template": "resume-view/employment/employment.html",
 		"employment history":[
 		  {
+			"img": "images/HTML5maker_logo.png",
 			"type": {"web": true},
 			"company name":"Html5maker.com",
 			"position":"Software Engineer",
@@ -49,6 +53,7 @@
 				"Source control with Git, and package management with NPM, Bower, Grunt"]
 		  },
 		  {
+			"img": "images/jpmorgan-chase.jpg",
 			"type": {"it":true},
 			"company name":"JPMorgan Chase & Co. Global Fund Services",
 			"position":"Application Developer",
@@ -64,6 +69,7 @@
 				"Executed the Agile Software Development Lifecycle (SDLC) with 2 week Sprints managed with JIRA"]
 		  },
 		  {
+			"img": "images/jpmorgan-chase.jpg",
 			"type": {"it":true},
 			"company name":"JPMorgan Chase & Co. Compute Back Bone (CBB)",
 			"position":"Intern",
@@ -79,6 +85,7 @@
 		"education":[
 		  {
 			"school":{
+			  "img": "images/syracuse-engineering.png",
 			  "main school/university name":"Syracuse University",
 			  "sub school/college name":"L. C. Smith College of Engineering and Computer Science",
 			  "location":"Syracuse, NY",

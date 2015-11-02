@@ -1,7 +1,11 @@
-<div ng-show="sect.filteredEd.length">
+<div ng-show="sect.filteredEd.length" class="sections">
     <p><b>Education</b></p>
     <ul>
         <li ng-repeat="knowledge in sect.filteredEd = (sect.education | filter:query)">
+            <div class="logo">
+                <img ng-src="{{knowledge.school.img}}" height="84" width="210">
+            </div>
+            <br/>
             <p><b>{{knowledge.school["main school/university name"]}}</b>, {{knowledge.school["sub school/college name"]}}, {{knowledge.school.location}}</p>
 
             <p><i>{{knowledge.school.degree[0].name}}</i>, {{knowledge.school.degree[0]["date earned"]}}</p>
