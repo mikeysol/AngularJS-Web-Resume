@@ -15,9 +15,9 @@
             <ul class="list-unstyled">
                 <!--Resume content-->
                 <li ng-repeat="resume in resumes">
-                    <ul class="list-unstyled" data-as-sortable data-ng-model="resume.sections">
-                        <li ng-repeat="sect in resume.sections" data-as-sortable-item>
-                            <div id="{{sect.sectId}}" data-as-sortable-item-handle ng-include=sect.template></div>
+                    <ul class="list-unstyled"> <!--data-as-sortable data-ng-model="resume.sections"-->
+                        <li ng-repeat="sect in resume.sections"> <!--data-as-sortable-item>-->
+                            <div id="{{sect.sectId}}" ng-include=sect.template></div><!--data-as-sortable-item-handle-->
                         </li>
                     </ul>
                 </li>
