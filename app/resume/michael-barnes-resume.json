@@ -7,13 +7,15 @@
 		"template": "resume-view/intro/intro.html",
 		"name": "Michael S. Barnes",
 		"address": "San Francisco, CA",
-		"phone": "(856) 577-1467",
-		"github": "https://github.com/mikeysol",
 		"website": "http://www.michaelbarnes.info/",
 		"social media": [
 		  {
 			"url": "https://www.linkedin.com/in/mikesbarnes",
 			"icon": "images/linkedin-icon.png"
+		  },
+		  {
+			"url": "https://github.com/mikeysol",
+			"icon": "images/github-icon.png"
 		  }
 		],
 		"email": "michaelbarnesmail@gmail.com"

@@ -10,6 +10,11 @@
   display:table;
 }
 
+body {
+  padding-top: 50px;
+}
+/*.navbar-toggle { display:block; }*/
+
 .row {
   height: 100%;
   display: table-row;
@@ -29,6 +34,14 @@
   float: none;
   display: table-cell;
   vertical-align: top;
+}
+@media (min-width: 768px) {
+  #sidebar .collapse{
+    display: block;
+  }
+.collapse.in{
+  display: table-cell;
+  }
 }
 
 .center {
@@ -65,5 +78,4 @@
 
 input{
   margin-top: 10%;
-  margin-left: 5%;
 }
