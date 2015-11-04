@@ -5,8 +5,10 @@
             <div class="collapse side-bar">
                 <!--Sidebar content-->
 
-                Search: <input ng-model="query">
-                <div ng-include="'resume-view/side-nav/side-nav.html'"></div>
+                <div id="sidecontrol">
+                    <input ng-model="query" class="form-control" placeholder="Search">
+                    <div ng-include="'resume-view/side-nav/side-nav.html'"></div>
+                </div>
             </div>
         </div>
         <div class="col-md-12">
