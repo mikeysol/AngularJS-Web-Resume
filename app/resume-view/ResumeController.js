@@ -20,8 +20,7 @@ resume.config(['$routeProvider', function($routeProvider) {
           controller: 'ResumeCtrl'
       });
 }])
-
-.controller('ResumeCtrl', ['$scope','Resume','$location',function($scope,Resume) {
+    .controller('ResumeCtrl', ['$scope','Resume','$location',function($scope,Resume) {
         $scope.resumes = Resume.query();
         $scope.dragControlListeners = {
             //accept: function (sourceItemHandleScope, destSortableScope) {return true;},//override to determine drag is allowed or not. default is true.
@@ -33,4 +32,4 @@ resume.config(['$routeProvider', function($routeProvider) {
             containment: '#board',//optional param.
             clone: true //optional param for clone feature.
         };
-}]);
+    }]);

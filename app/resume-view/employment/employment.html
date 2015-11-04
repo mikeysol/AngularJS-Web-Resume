@@ -9,7 +9,7 @@
                 <p><b>{{job["company name"]}}</b>, {{job.location}} {{job.period}}</p>
                 <p>{{job.position}}</p>
                 <ul>
-                    <li ng-repeat="text in job.filteredDescript = (job.description | filter:query)">
+                    <li class="info-listing" ng-repeat="text in job.filteredDescript = (job.description | filter:query)">
                         <p>{{text}}</p>
                     </li>
                 </ul>
