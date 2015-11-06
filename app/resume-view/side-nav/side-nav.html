@@ -1,10 +1,13 @@
 <br/>
 <div class="panel panel-default" ng-controller="SideCtrl">
         <!-- Default panel contents -->
-        <div class="panel-heading">Section View<button ng-click="setDnD(false)" type="button" class="btn-primary" style="float: right;">Edit</button></div>
+        <div class="panel-heading">Section View</div>
+        <div class="panel-body">
+            <p><i>Reorder sections in the resume by dragging list items here in the panel.</i></p>
+        </div>
 
         <!-- List group -->
-        <ul id="sectView" class="list-group" data-as-sortable data-ng-model="SharedData.sects">
+        <ul id="sectView" class="list-group" data-as-sortable data-ng-model="SharedData.sects" is-disabled="false">
             <li class="list-group-item" ng-repeat="sect in SharedData.sects" data-as-sortable-item>
                 <div data-as-sortable-item-handle >{{viewControlName(sect)}}</div>
             </li>
