@@ -2,14 +2,7 @@
     <div ng-include="'resume-view/top-nav/top-nav1.html'"></div>
     <div class="row">
         <div id="sidebar" class="collapse in side-bar col-md-2 sections" role="navigation">
-            <div class="collapse side-bar">
-                <!--Sidebar content-->
-
-                <div id="sidecontrol">
-                    <input ng-model="SharedData.query" class="form-control" placeholder="Search">
-                    <div ng-include="'resume-view/side-nav/side-nav.html'"></div>
-                </div>
-            </div>
+            <div ng-include="'resume-view/side-nav/side-nav.html'"></div>
         </div>
         <div class="col-md-12">
             <div ng-controller="NavCtrl" ng-include="'resume-view/top-nav/top-nav2.html'"></div>
