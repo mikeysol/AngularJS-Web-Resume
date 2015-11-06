@@ -6,7 +6,7 @@
                 <!--Sidebar content-->
 
                 <div id="sidecontrol">
-                    <input ng-model="query" class="form-control" placeholder="Search">
+                    <input ng-model="SharedData.query" class="form-control" placeholder="Search">
                     <div ng-include="'resume-view/side-nav/side-nav.html'"></div>
                 </div>
             </div>
@@ -17,9 +17,9 @@
             <ul class="list-unstyled">
                 <!--Resume content-->
                 <li ng-repeat="resume in resumes">
-                    <ul class="list-unstyled"> <!--data-as-sortable data-ng-model="resume.sections"-->
-                        <li ng-repeat="sect in resume.sections"> <!--data-as-sortable-item>-->
-                            <div id="{{sect.sectId}}" ng-include=sect.template></div><!--data-as-sortable-item-handle-->
+                    <ul class="list-unstyled">
+                        <li class="info-listing" ng-repeat="sect in SharedData.sects = resume.sections">
+                            <div id="{{sect.sectId}}" ng-include=sect.template></div>
                         </li>
                     </ul>
                 </li>

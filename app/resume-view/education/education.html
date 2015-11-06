@@ -1,7 +1,7 @@
 <div ng-show="sect.filteredEd.length" class="sections">
     <p><b>Education</b></p>
     <ul>
-        <li class="info-listing" ng-repeat="knowledge in sect.filteredEd = (sect.education | filter:query)">
+        <li class="info-listing" ng-repeat="knowledge in sect.filteredEd = (sect.education | filter:SharedData.query)">
             <div class="logo">
                 <img ng-src="{{knowledge.school.img}}" height="84" width="210">
             </div>
@@ -12,7 +12,7 @@
             <div ng-show="knowledge.school.filteredProjects.length">
                 <p><b>Notable College Projects</b></p>
                 <ul>
-                    <li class="info-listing" ng-repeat="project in knowledge.school.filteredProjects = (knowledge.school['school projects'] | filter:query)">
+                    <li class="info-listing" ng-repeat="project in knowledge.school.filteredProjects = (knowledge.school['school projects'] | filter:SharedData.query)">
                         <p>{{project}}</p>
                     </li>
                 </ul>

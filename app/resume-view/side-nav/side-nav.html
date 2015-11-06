@@ -1,4 +1,13 @@
-<div>
+<br/>
+<div class="panel panel-default" ng-controller="SideCtrl">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Section View<button ng-click="setDnD(false)" type="button" class="btn-primary" style="float: right;">Edit</button></div>
 
-
+        <!-- List group -->
+        <ul id="sectView" class="list-group" data-as-sortable data-ng-model="SharedData.sects">
+            <li class="list-group-item" ng-repeat="sect in SharedData.sects" data-as-sortable-item>
+                <div data-as-sortable-item-handle >{{viewControlName(sect)}}</div>
+            </li>
+        </ul>
 </div>
+<br/>

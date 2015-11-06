@@ -1,7 +1,7 @@
 <div ng-show="sect.filteredJobs.length" class="sections">
     <p><b>Employment</b></p>
     <ul ng-controller="EmpCtrl">
-        <li ng-repeat="job in sect.filteredJobs=(sect['employment history'] | filter:query | perspective)"  ng-show="job.filteredDescript.length + sect.filteredJobs.length">
+        <li ng-repeat="job in sect.filteredJobs=(sect['employment history'] | filter:SharedData.query | perspective)"  ng-show="job.filteredDescript.length + sect.filteredJobs.length">
             <div>
                 <div class="logo">
                     <img ng-src="{{job.img}}" height="84" width="210">
@@ -9,7 +9,7 @@
                 <p><b>{{job["company name"]}}</b>, {{job.location}} {{job.period}}</p>
                 <p>{{job.position}}</p>
                 <ul>
-                    <li class="info-listing" ng-repeat="text in job.filteredDescript = (job.description | filter:query)">
+                    <li class="info-listing" ng-repeat="text in job.filteredDescript = (job.description | filter:SharedData.query)">
                         <p>{{text}}</p>
                     </li>
                 </ul>

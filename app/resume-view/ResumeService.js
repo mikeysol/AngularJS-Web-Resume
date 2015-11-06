@@ -11,3 +11,12 @@ resumeServices.factory('Resume', ['$resource',
         });
     }]);
 
+resumeServices.service('Data',[
+    function(){
+        var SharedData ={
+            query: '',
+            sects: []
+        };
+        return SharedData;
+    }
+]);

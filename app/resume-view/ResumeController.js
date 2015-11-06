@@ -20,16 +20,7 @@ resume.config(['$routeProvider', function($routeProvider) {
           controller: 'ResumeCtrl'
       });
 }])
-    .controller('ResumeCtrl', ['$scope','Resume','$location',function($scope,Resume) {
+    .controller('ResumeCtrl', ['$scope','Resume','Data',function($scope,Resume,Data) {
         $scope.resumes = Resume.query();
-        $scope.dragControlListeners = {
-            //accept: function (sourceItemHandleScope, destSortableScope) {return true;},//override to determine drag is allowed or not. default is true.
-            itemMoved: function (event) {
-                event.source.itemScope.modelValue.status = event.dest.sortableScope.$parent.column.name;
-            },
-            orderChanged: function(event) {
-                },
-            containment: '#board',//optional param.
-            clone: true //optional param for clone feature.
-        };
+        $scope.SharedData = Data;
     }]);
