@@ -16,7 +16,7 @@
             <br/>
             <ul class="list-unstyled">
                 <!--Resume content-->
-                <li ng-repeat="resume in resumes">
+                <li ng-repeat="resume in SharedData.resumes">
                     <ul class="list-unstyled">
                         <li class="info-listing" ng-repeat="sect in SharedData.sects = resume.sections">
                             <div id="{{sect.sectId}}" ng-include=sect.template></div>

@@ -11,11 +11,12 @@ resumeServices.factory('Resume', ['$resource',
         });
     }]);
 
-resumeServices.service('Data',[
-    function(){
+resumeServices.service('Data',['Resume',
+    function(Resume){
         var SharedData ={
             query: '',
-            sects: []
+            sects: [],
+            resumes: Resume.query()
         };
         return SharedData;
     }

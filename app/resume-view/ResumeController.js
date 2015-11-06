@@ -21,6 +21,5 @@ resume.config(['$routeProvider', function($routeProvider) {
       });
 }])
     .controller('ResumeCtrl', ['$scope','Resume','Data',function($scope,Resume,Data) {
-        $scope.resumes = Resume.query();
         $scope.SharedData = Data;
     }]);
