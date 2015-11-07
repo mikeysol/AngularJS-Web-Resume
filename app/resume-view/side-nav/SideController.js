@@ -19,5 +19,6 @@ nav.controller('SideCtrl', ['$scope','Data', function($scope,Data){
 
     $scope.reset = function(){
         angular.copy($scope.SharedData.primeSects,$scope.SharedData.sects);
+        $scope.SharedData.query = '';
     };
 }]);
