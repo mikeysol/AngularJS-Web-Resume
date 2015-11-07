@@ -14,9 +14,12 @@
                 <!-- List group -->
                 <ul id="sectView" class="list-group" data-as-sortable data-ng-model="SharedData.sects" is-disabled="false">
                     <li ng-show="SharedData[sect.sectId]" class="list-group-item" ng-repeat="sect in SharedData.sects" data-as-sortable-item>
-                        <div  data-as-sortable-item-handle >{{viewControlName(sect)}}</div>
+                        <div  data-as-sortable-item-handle >
+                            {{viewControlName(sect)}}<span ng-if="checkNum(SharedData[sect.sectId])" class="badge pull-right">{{SharedData[sect.sectId]}}</span>
+                        </div>
                     </li>
                 </ul>
+            <button ng-click="reset()" class="btn btn-primary pull-right" type="button">Reset</button>
         </div>
         <br/>
     </div>

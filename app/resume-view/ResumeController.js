@@ -22,4 +22,9 @@ resume.config(['$routeProvider', function($routeProvider) {
 }])
     .controller('ResumeCtrl', ['$scope','Resume','Data',function($scope,Resume,Data) {
         $scope.SharedData = Data;
+        $scope.$on('ngRepeatDone', function(ngRepeatComplete) {
+            if($scope.SharedData.primeSects.length == 0){
+                $scope.SharedData.primeSects = angular.copy($scope.SharedData.sects);
+            }
+        });
     }]);
