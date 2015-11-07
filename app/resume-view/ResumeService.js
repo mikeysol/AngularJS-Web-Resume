@@ -14,6 +14,12 @@ resumeServices.factory('Resume', ['$resource',
 resumeServices.service('Data',['Resume',
     function(Resume){
         var SharedData ={
+            intro: true,
+            summary: true,
+            skills: [],
+            employment: [],
+            education: [],
+            projects: [],
             query: '',
             sects: [],
             resumes: Resume.query()

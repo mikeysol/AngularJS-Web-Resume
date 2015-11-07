@@ -1,4 +1,4 @@
-<div ng-show="sect.filteredEd.length" class="sections">
+<div ng-show="SharedData.education = sect.filteredEd.length" class="sections">
     <p><b>Education</b></p>
     <ul>
         <li class="info-listing" ng-repeat="knowledge in sect.filteredEd = (sect.education | filter:SharedData.query)">

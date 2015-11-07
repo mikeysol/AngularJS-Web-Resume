@@ -13,8 +13,8 @@
 
                 <!-- List group -->
                 <ul id="sectView" class="list-group" data-as-sortable data-ng-model="SharedData.sects" is-disabled="false">
-                    <li class="list-group-item" ng-repeat="sect in SharedData.sects" data-as-sortable-item>
-                        <div data-as-sortable-item-handle >{{viewControlName(sect)}}</div>
+                    <li ng-show="SharedData[sect.sectId]" class="list-group-item" ng-repeat="sect in SharedData.sects" data-as-sortable-item>
+                        <div  data-as-sortable-item-handle >{{viewControlName(sect)}}</div>
                     </li>
                 </ul>
         </div>
