@@ -1,7 +1,7 @@
 <div ng-show="SharedData.education = sect.filteredEd.length" class="sections">
     <p><b>Education</b></p>
     <ul>
-        <li class="info-listing" ng-repeat="knowledge in sect.filteredEd = (sect.education | filter:SharedData.query)">
+        <li class="info-listing list-unstyled" ng-repeat="knowledge in sect.filteredEd = (sect.education | filter:SharedData.query)">
             <div class="logo">
                 <img ng-src="{{knowledge.school.img}}" height="84" width="210">
             </div>

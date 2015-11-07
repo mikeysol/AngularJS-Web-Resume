@@ -1,6 +1,6 @@
 <div ng-show="SharedData.employment = sect.filteredJobs.length" class="sections">
     <p><b>Employment</b></p>
-    <ul ng-controller="EmpCtrl">
+    <ul id="jobs" class="list-unstyled">
         <li ng-repeat="job in sect.filteredJobs=(sect['employment history'] | filter:SharedData.query | perspective)"  ng-show="job.filteredDescript.length + sect.filteredJobs.length">
             <div>
                 <div class="logo">
