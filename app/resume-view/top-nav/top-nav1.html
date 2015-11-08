@@ -1,11 +1,36 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav id="topnav" class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-parent="#sidebar" data-target=".side-bar" aria-expanded="false" aria-controls="navbar">
+        <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-parent="#topnav" data-target="#topDrop" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#/">WebResume</a>
+    </div>
+
+    <div id="topDrop" class="collapse">
+        <input ng-model="SharedData.query" class="form-control" placeholder="Search">
+        <br/>
+        <div class="panel panel-default" ng-controller="SideCtrl">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Section View</div>
+            <div class="panel-body">
+                <p><i>Reorder sections in the resume by dragging list items here in the panel.</i></p>
+            </div>
+
+            <!-- List group -->
+            <ul id="sectView" class="list-group" data-as-sortable data-ng-model="SharedData.sects" is-disabled="false">
+                <li ng-show="SharedData[sect.sectId]" class="list-group-item" ng-repeat="sect in SharedData.sects" data-as-sortable-item>
+                    <div  data-as-sortable-item-handle >
+                        {{viewControlName(sect)}}<span ng-if="checkNum(SharedData[sect.sectId])" class="badge pull-right">{{SharedData[sect.sectId]}}</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="center">
+                <button ng-click="reset()" class="btn btn-danger round" type="button">Reset</button>
+            </div>
+        </div>
+        <br/>
     </div>
 </nav>

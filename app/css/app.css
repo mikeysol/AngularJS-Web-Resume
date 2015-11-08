@@ -34,6 +34,7 @@ body {
   display: table-cell;
   vertical-align: top;
 }
+
 @media (min-width: 768px) {
   #sidebar .collapse{
     display: block;
@@ -41,6 +42,7 @@ body {
 .collapse.in{
   display: table-cell;
   }
+
 }
 
 .center {
