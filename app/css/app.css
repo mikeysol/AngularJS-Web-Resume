@@ -45,8 +45,9 @@ body {
   display: table-row;
   width: 100%;
   background: url("http://www.michaelbarnes.info/images/sanfran.jpg") no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-attachment: fixed;
+  background-position: center center;
 }
 
 
@@ -68,12 +69,21 @@ body {
   vertical-align: top;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px){
   #sidebar .collapse{
     display: block;
   }
   .collapse.in{
     display: table-cell;
+  }
+}
+
+@media (max-width: 769px){
+
+#rowview {
+    background: url("http://www.michaelbarnes.info/images/sanfran.jpg") no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
   }
 }
 
