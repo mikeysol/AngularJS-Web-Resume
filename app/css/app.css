@@ -44,7 +44,7 @@ body {
   height: 100%;
   display: table-row;
   width: 100%;
-  background: url("images/sanfran.jpg") no-repeat;
+  background: url("http://www.michaelbarnes.info/images/sanfran.jpg") no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
 }
