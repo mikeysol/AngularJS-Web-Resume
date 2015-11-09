@@ -1,10 +1,11 @@
 <div id="resume-view" class="container-fluid sections">
+    <div ng-include="'resume-view/about/info.html'"></div>
     <div ng-include="'resume-view/top-nav/top-nav1.html'"></div>
     <div class="row">
-        <div id="sidebar" class="collapse in side-bar col-md-2 sections" role="navigation">
+        <div id="sidebar" on-resize class="collapse in side-bar col-md-2 sections" role="navigation">
             <div ng-include="'resume-view/side-nav/side-nav.html'"></div>
         </div>
-        <div class="col-md-12">
+        <div id="content" class="col-md-12">
             <div ng-controller="NavCtrl" ng-include="'resume-view/top-nav/top-nav2.html'"></div>
             <br/>
             <ul class="list-unstyled">

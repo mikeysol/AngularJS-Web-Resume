@@ -14,19 +14,52 @@ body {
   padding-top: 50px;
 }
 
+#site, #mail{
+  background: white;
+  display: inline-block;
+  padding: .5%;
+}
+#summary{
+  -webkit-box-shadow: 0px 0px 5px 0px #4d4d4d;
+  -moz-box-shadow: 0px 0px 5px 0px #4d4d4d;
+  box-shadow: 0px 0px 5px 0px #4d4d4d;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+
+}
+#skills,#employment,#education,
+#projects{
+  background-color: white;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+}
+
 .row {
   height: 100%;
   display: table-row;
   width: 100%;
+  background: url("/app/images/sanfran.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
+
+
 
 .col-md-2{
   background-color: rgba(44, 157, 255, 0.65);
   width: 20%;
+  position: fixed;
 }
 
-.col-md-10{
+.col-md-12{
   width: 80%;
+  left: 10%;
 }
 
 [class*="col-"] {
@@ -39,10 +72,9 @@ body {
   #sidebar .collapse{
     display: block;
   }
-.collapse.in{
-  display: table-cell;
+  .collapse.in{
+    display: table-cell;
   }
-
 }
 
 .center {

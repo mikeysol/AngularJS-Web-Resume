@@ -25,6 +25,7 @@ resume.config(['$routeProvider', function($routeProvider) {
         $scope.$on('ngRepeatDone', function(ngRepeatComplete) {
             if($scope.SharedData.primeSects.length == 0){
                 $scope.SharedData.primeSects = angular.copy($scope.SharedData.sects);
+                $('#myModal').modal('show')
             }
         });
     }]);
