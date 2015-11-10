@@ -10,8 +10,8 @@
                 <p><b>{{job["company name"]}}</b>, {{job.location}}</p><p style="margin-left: 1em; color: blue;"><b>{{job.period}}</b></p>
                 <div style="white-space: nowrap;"><b><p style="background: rgba(139, 18, 24, 0.58); color: white;">{{job.position}}</p></b></div>
                 <ul>
-                    <li class="info-listing" ng-repeat="text in job.filteredDescript = (job.description | filter:SharedData.query)">
-                        <p>{{text}}</p>
+                    <li class="info-listing"   ng-repeat="text in job.filteredDescript = (job.description | filter:SharedData.query)">
+                        <p highlight="text" keywords="SharedData.keywords">{{text}}</p>
                     </li>
                 </ul>
             </div>

@@ -26,13 +26,13 @@ resume.config(['$routeProvider', function($routeProvider) {
         // Returns the version of Internet Explorer or a 0
         // (indicating the use of another browser).
         {
-            var rv = 0; // Return value assumes failure.
+            var rv = false; // Return value assumes failure.
             if (navigator.appName == 'Microsoft Internet Explorer')
             {
                 var ua = navigator.userAgent;
                 var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
                 if (re.exec(ua) != null)
-                    rv = parseFloat( RegExp.$1 );
+                    rv = true;
             }
             return rv;
         };
@@ -74,6 +74,7 @@ resume.config(['$routeProvider', function($routeProvider) {
             jQuery('#rowview').attr('background', 'none');
             if($scope.SharedData.primeSects.length == 0){
                 $scope.SharedData.primeSects = angular.copy($scope.SharedData.sects);
+                $scope.SharedData.primeWords = angular.copy($scope.SharedData.keywords);
                 $timeout(function(){$('#myModal').modal('show');}, 1000);
             }
         });

@@ -14,7 +14,9 @@ resumeServices.factory('Resume', ['$resource',
 resumeServices.service('Data',['Resume',
     function(Resume){
         var SharedData ={
-            primeState: false,
+            keywords: "java,html5,angularjs,c\\+\\+,python,sql,android," +
+            "javascript,front-end,back-end,agile,bi,unit tests",
+            primeWords: "",
             intro: true,
             summary: true,
             skills: [],

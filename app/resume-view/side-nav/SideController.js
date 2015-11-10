@@ -21,4 +21,11 @@ nav.controller('SideCtrl', ['$scope','Data', function($scope,Data){
         angular.copy($scope.SharedData.primeSects,$scope.SharedData.sects);
         $scope.SharedData.query = '';
     };
+    $scope.toggle = function(){
+        if($scope.SharedData.keywords !== ""){
+            $scope.SharedData.keywords = "";
+        }else{
+            $scope.SharedData.keywords = angular.copy($scope.SharedData.primeWords);
+        }
+    };
 }]);
