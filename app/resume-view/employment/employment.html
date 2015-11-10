@@ -6,8 +6,9 @@
                 <div class="logo">
                     <img ng-src="{{job.img}}" height="84" width="210">
                 </div>
-                <p><b>{{job["company name"]}}</b>, {{job.location}} {{job.period}}</p>
-                <p>{{job.position}}</p>
+                <br />
+                <p><b>{{job["company name"]}}</b>, {{job.location}}</p><p style="margin-left: 1em; color: blue;"><b>{{job.period}}</b></p>
+                <div style="white-space: nowrap;"><b><p style="background: rgba(139, 18, 24, 0.58); color: white;">{{job.position}}</p></b></div>
                 <ul>
                     <li class="info-listing" ng-repeat="text in job.filteredDescript = (job.description | filter:SharedData.query)">
                         <p>{{text}}</p>

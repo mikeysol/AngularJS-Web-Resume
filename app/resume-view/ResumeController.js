@@ -20,12 +20,13 @@ resume.config(['$routeProvider', function($routeProvider) {
           controller: 'ResumeCtrl'
       });
 }])
-    .controller('ResumeCtrl', ['$scope','Resume','Data',function($scope,Resume,Data) {
+    .controller('ResumeCtrl', ['$scope','$timeout','Resume','Data',function($scope,$timeout,Resume,Data) {
         $scope.SharedData = Data;
+        console.log($scope);
         $scope.$on('ngRepeatDone', function(ngRepeatComplete) {
             if($scope.SharedData.primeSects.length == 0){
                 $scope.SharedData.primeSects = angular.copy($scope.SharedData.sects);
-                $('#myModal').modal('show')
+                $timeout(function(){$('#myModal').modal('show');}, 1000);
             }
         });
     }]);

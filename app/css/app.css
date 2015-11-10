@@ -19,25 +19,27 @@ body {
   display: inline-block;
   padding: .5%;
 }
-#summary{
-  -webkit-box-shadow: 0px 0px 5px 0px #4d4d4d;
-  -moz-box-shadow: 0px 0px 5px 0px #4d4d4d;
-  box-shadow: 0px 0px 5px 0px #4d4d4d;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -khtml-border-radius: 8px;
-  border-radius: 8px;
-  overflow: hidden;
-  background: white;
 
-}
-#skills,#employment,#education,
+
+#summary,#skills,#employment,#education,
 #projects{
-  background-color: white;
+  background-color: rgba(34, 34, 34, 0.53);
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -khtml-border-radius: 8px;
   border-radius: 8px;
+  padding: .5%;
+}
+
+#summary p,#skills  p,#employment  p,#education  p,
+#projects  p{
+  background-color: rgb(255, 255, 255);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  display: inline-block;
+  padding: .5%;
 }
 
 .row {
@@ -80,6 +82,10 @@ body {
    .col-md-12{
      left: 0%;
    }
+  #summary,#skills,#employment,#education,
+  #projects{
+    background-color: white;
+  }
 
 }
 @media (min-width: 768px){
@@ -92,7 +98,10 @@ body {
   .col-md-12{
     left: 10%;
   }
-
+  #summary,#skills,#employment,#education,
+  #projects{
+    background-color: rgba(34, 34, 34, 0.53);
+  }
 }
 
 .center {

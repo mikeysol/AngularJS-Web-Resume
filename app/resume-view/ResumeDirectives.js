@@ -15,15 +15,3 @@ resume.directive('onFinishRender', function ($timeout) {
             }
         }
 });
-
-resume.directive('onResize', function () {
-    return {
-        restrict: 'C',
-        link: function (scope, element, attr) {
-            if ($(window).width < 769) {
-                $('#sidebar').removeAttribute('position');
-                scope.apply();
-            }
-        }
-    }
-});

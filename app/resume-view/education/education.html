@@ -3,12 +3,15 @@
     <ul>
         <li class="info-listing list-unstyled" ng-repeat="knowledge in sect.filteredEd = (sect.education | filter:SharedData.query)">
             <div class="logo">
-                <img ng-src="{{knowledge.school.img}}" height="84" width="210">
+                <img ng-src="{{knowledge.school.img}}" height="84" width="210" style="background: white;">
             </div>
             <br/>
             <p><b>{{knowledge.school["main school/university name"]}}</b>, {{knowledge.school["sub school/college name"]}}, {{knowledge.school.location}}</p>
 
-            <p><i>{{knowledge.school.degree[0].name}}</i>, {{knowledge.school.degree[0]["date earned"]}}</p>
+            <div>
+                <p><i>{{knowledge.school.degree[0].name}}</i></p>
+                <div style="margin-left: 1em; white-space: nowrap; display: inline-block; color: blue;"><p><b>{{knowledge.school.degree[0]["date earned"]}}</b></p></div>
+            </div>
             <div ng-show="knowledge.school.filteredProjects.length">
                 <p><b>Notable College Projects</b></p>
                 <ul>

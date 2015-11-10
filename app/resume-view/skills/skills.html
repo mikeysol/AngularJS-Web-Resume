@@ -1,6 +1,6 @@
 <div ng-show="SharedData.skills = sect.filteredList.length" class="sections">
     <h4><span class="label label-primary"><b>Technical Skills</b></span></h4>
     <ul>
-        <li class="info-listing" ng-repeat="skill in sect.filteredList = (sect.list | filter:SharedData.query | perspective)" >{{skill.val}}</li>
+        <li class="info-listing" ng-repeat="skill in sect.filteredList = (sect.list | filter:SharedData.query | perspective)" ><p>{{skill.val}}</p></li>
     </ul>
 </div>
