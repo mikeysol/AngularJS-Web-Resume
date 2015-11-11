@@ -7,7 +7,8 @@ angular.module('myApp', [
     'resumeServices',
     'resumeFilters',
     'myApp.resume',
-    'as.sortable'
+    'as.sortable',
+    'ngSanitize'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/resume/all'});

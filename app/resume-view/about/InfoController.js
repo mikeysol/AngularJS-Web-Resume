@@ -6,10 +6,14 @@
 var nav = angular.module('myApp.resume');
 
 nav.controller('InfoCtrl', ['$scope','$interval', function($scope,$interval){
-    $scope.data = ["Hi, I am Michael Barnes and I developed this small WebApp to feature my resume" +
-    " and to help recruiters or hiring managers get to know me. Here a user can filter it by searching for words in the search bar, reorder the " +
-    "sections of the resume in the Section View panel, and view the resume from different perspectives such as Web or all Software Engineering. " +
-    "I will be updating this app and adding features over time. Check out the source code on my gitHub. If you're hiring then connect with me on LinkedIn or send me an email. " +
+    $scope.data = ["Hi, I am <b>Michael Barnes</b> and I developed this small WebApp in <b>AngularJS</b> featuring my resume" +
+    " to help recruiters or hiring managers get to know me. <br/> <br/>" +
+    "<ul><li>You can <b>filter</b> out sections via the search bar</li>" +
+    "<li><b>Reorder</b> the sections via the Section View panel</li>" +
+    "<li>At the top of page <b>navigate to different perspectives</b> such as Web or all Software Engineering.</li>" +
+    "<li><b>Toggle colored Buzz Words</b> on/off to help scan for desired skills</li></ul>" +
+    "I will be updating this app and adding features over time. Check out the source code on my gitHub.<br/>" +
+    "If you're <b>hiring</b> then connect with me on LinkedIn or send me an email.<br/>" +
     "Thanks and enjoy!"];
     $scope.index = 0;
 

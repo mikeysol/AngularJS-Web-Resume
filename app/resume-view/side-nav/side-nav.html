@@ -8,8 +8,8 @@
                 <!-- Default panel contents -->
                 <div class="panel-heading">Section View</div>
                 <div class="panel-body">
-                    <p style="font-size: small;"><i>Reorder sections in the resume by dragging list items here in the panel. Also click Buzz Words to
-                     toggle highlighted words.</i></p>
+                    <p ><i>Reorder sections in the resume by dragging list items here in the panel. Also click Buzz Words to
+                     toggle orange colored words.</i></p>
                 </div>
                 <div class="center">
                     <button ng-click="toggle()" class="btn btn-primary round" type="button">Buzz Words</button>
@@ -17,8 +17,10 @@
                 <!-- List group -->
                 <ul id="sectView" class="list-group" data-as-sortable data-ng-model="SharedData.sects" is-disabled="false">
                     <li ng-show="SharedData[sect.sectId]" class="list-group-item" ng-repeat="sect in SharedData.sects" data-as-sortable-item>
-                        <div  data-as-sortable-item-handle >
-                            {{viewControlName(sect)}}<span ng-if="checkNum(SharedData[sect.sectId])" class="badge pull-right">{{SharedData[sect.sectId]}}</span>
+                        <div  data-as-sortable-item-handle style="position: relative;">
+                            <div class="draggable"><b>{{viewControlName(sect)}}</b></div>
+                            <div class="draggable" style="position: absolute; left: 50%"><img src="images/draggable.png" height="21" width="21"></div>
+                            <span ng-if="checkNum(SharedData[sect.sectId])" class="badge pull-right indicator">{{SharedData[sect.sectId]}}</span>
                         </div>
                     </li>
                 </ul>
