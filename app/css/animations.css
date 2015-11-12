@@ -67,7 +67,7 @@
   padding-bottom: 0;
 }
 
-/* cross fading between routes with ngView */
+/* cross fading between routes with ngView
 
 .view-container {
   position: relative;
@@ -123,4 +123,4 @@
   from { opacity: 1; }
   to { opacity: 0; }
 }
-
+*/
