@@ -1,3 +1,4 @@
+<!-- Template for the Introduction pop-up -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -7,23 +8,7 @@
             </div>
             <div class="modal-body">
                 <div id="carousel" ng-controller="InfoCtrl">
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <P style="font: large sans-serif;" ng-bind-html="data[index]"></P>
-                        </div>
-                    </div>
-
-                    <!--
-                    <a ng-click="previous()" class="left carousel-control" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a ng-click="next()" class="right carousel-control"  role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>-->
+                    <P style="font: large sans-serif;" ng-bind-html="data"></P>
                 </div>
             </div>
             <div class="modal-footer">

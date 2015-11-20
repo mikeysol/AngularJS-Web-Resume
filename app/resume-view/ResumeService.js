@@ -26,6 +26,15 @@ resumeServices.service('Data',['Resume',
             query: '',
             sects: [],
             primeSects: [],
+            data: ["Hi, I am <b>Michael Barnes</b> and this is a small demo in <b>AngularJS</b> that turns a standard resume" +
+            " into something more fun. <br/> <br/>" +
+            "<ul><li>You can <b>filter</b> out sections via the search bar</li>" +
+            "<li><b>Reorder</b> the sections via the Section View panel</li>" +
+            "<li>At the top of page <b>navigate to different perspectives</b> such as Web or all Software Engineering.</li>" +
+            "<li><b>Toggle colored Buzz Words</b> on/off to help scan for desired skills</li></ul>" +
+            "I will be adding features over time. Check out the source code on my gitHub.<br/>" +
+            "If you're <b>hiring</b> then connect with me on LinkedIn or send me an email.<br/>" +
+            "Thanks and enjoy!"],
             resumes: Resume.query()
         };
         return SharedData;
