@@ -19,7 +19,7 @@
     "method-override": "~1.0.0",
     "morgan": "^1.10.0",
     "protractor": "^2.1.0",
-    "shelljs": "^0.2.6"
+    "shelljs": "^0.8.5"
   },
   "scripts": {
     "postinstall": "bower install",
